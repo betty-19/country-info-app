@@ -90,7 +90,7 @@ function renderCards(countries) {
         <img src="${flag}" alt="${name} flag">
       </div>
       <div class="country-info">
-        <h3><a href="details.html?name=${encodeURIComponent(name)}">${name}</a></h3>
+        <h3><a href="../pages/detail.html?name=${encodeURIComponent(name)}">${name}</a></h3>
         <p><strong>Population:</strong> <span>${population}</span></p>
         <p><strong>Region:</strong> <span>${region}</span></p>
         <p><strong>Capital:</strong> <span>${capital}</span></p>
