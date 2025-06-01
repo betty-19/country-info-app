@@ -1,0 +1,147 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(0, 0%, 96%);
+    font-family: 'Nunito Sans', sans-serif;
+    font-size:14px;
+}
+
+.countries-list{
+    margin-top:50px;
+     margin-inline:60px; 
+}
+.search-filter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 350px;
+    height: 45px;
+    background-color: hsl(0, 100%, 100%);
+    border-radius: 5px;
+    padding-left: 15px;
+}.search input{
+  display: flex;
+    border:none;
+    background-color: transparent;
+    padding:10px;
+    width:100%;  
+    height: 100%;
+}
+.search input:focus{
+    outline:none;
+    border:none;
+}
+.search i{
+    font-size:13px;
+}
+
+.custom-select {
+  width: 180px;
+  font-family: sans-serif;
+  user-select: none;
+  position: relative;
+}
+.selected {
+  background-color: hsl(0, 100%, 100%);
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.selected i{
+    font-size:10px;
+}
+.options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  margin-top: 5px;
+  display: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+.options div {
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.options div:hover {
+  background-color: hsl(0, 0%, 96%);;
+}
+.cards {
+   display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 60px;
+    column-gap: 50px;
+    margin-block:50px;
+   
+}
+
+.card {
+  background-color: hsl(0, 100%, 100%);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+   color:hsl(207, 26%, 17%);
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.flag img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+    display: block;
+}
+
+.country-info {
+  padding: 15px;
+}
+
+.country-info h3 {
+  margin: 0 0 10px;
+}
+.country-info h3 a{
+    text-decoration: none;
+    color:hsl(200, 15%, 8%);
+
+}
+
+.country-info p {
+  margin: 5px 0;
+}
+@media (max-width:767px){
+  .search-filter{
+    display: block;
+}
+.search {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+.cards {
+    grid-template-columns: 1fr;
+}
+.custom-select{
+  margin-top:30px;
+}
+}
