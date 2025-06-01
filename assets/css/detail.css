@@ -1,116 +1,152 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing: 0;
-}
-body{
-    background-color: hsl(0, 0%, 96%);
-    font-family: 'Nunito Sans', sans-serif;
-    font-size:16px;
-}
-.wrapper{
-    padding-top:60px;
-    padding-left:60px;
-}
-.back{
-    padding:7px 25px;
-    border:none;
-    border-radius: 5px;
-    cursor:pointer;
-    background-color: hsl(0, 100%, 100%);
-     box-shadow: 3px 1px 5px rgba(0, 0, 0, 0.2);
-     font-family: 'Nunito Sans', sans-serif;
-       text-decoration: none;
-        color:hsl(200, 15%, 8%);
-}
-.back i{
-    margin-right: 5px;
-   
-    
-}
-.country-details{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap:60px;
-    margin-block:60px;
-    padding-right:100px;
-}
-.details{
-    flex:1;
-}
-.details h3{
-    margin-bottom: 15px;
-    color:hsl(200, 15%, 8%);
-}
-.flag{
-    flex:1;
-    width: 100%;
-  height: 100%; 
-  overflow: hidden;
-}
-.flag img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    
-}
-.detail-info{
-    display: flex;
-    align-items: start;
-    justify-content: space-between;
-    color:hsl(207, 26%, 17%);
-}
-.detail-info p{
-    padding-bottom: 10px;
-}
-.border-countries{
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap:10px;
-}
-.borders a{
-    background-color: hsl(0, 100%, 100%);
-    border:1px solid rgba(128, 128, 128, 0.548);
-    padding:5px auto;
-    text-align: center;
-     font-family: 'Nunito Sans', sans-serif;
-     border-radius:5px;
-     color:hsl(200, 15%, 8%);
-     text-decoration: none;
-}
-.borders{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap:10px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (max-width: 767px){
-   .country-details{
-    display: block;
-} 
-.detail-info{
-    display: block;
+body {
+  background-color: hsl(0, 0%, 96%);
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
 }
-.border-countries{
-    display: block;  
+
+.wrapper {
+  padding: 60px 20px 60px 60px;
 }
-.right{
-    margin-top:40px;
+
+.back {
+  padding: 7px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: hsl(0, 100%, 100%);
+  box-shadow: 3px 1px 5px rgba(0, 0, 0, 0.2);
+  font-family: 'Nunito Sans', sans-serif;
+  text-decoration: none;
+  color: hsl(200, 15%, 8%);
+  display: inline-flex;
+  align-items: center;
 }
-.details h3{
+
+.back i {
+  margin-right: 5px;
+}
+
+.country-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  margin-block: 60px;
+  flex-wrap: wrap;
+}
+
+.details {
+  flex: 1;
+  min-width: 280px;
+}
+
+.details h3 {
+  margin-bottom: 15px;
+  color: hsl(200, 15%, 8%);
+}
+
+.flag {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  min-width: 280px;
+}
+
+.flag img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.detail-info {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  color: hsl(207, 26%, 17%);
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.detail-info p {
+  padding-bottom: 10px;
+}
+
+.border-countries {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.borders {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.borders a {
+  background-color: hsl(0, 100%, 100%);
+  border: 1px solid rgba(128, 128, 128, 0.548);
+  padding: 5px 15px;
+  text-align: center;
+  font-family: 'Nunito Sans', sans-serif;
+  border-radius: 5px;
+  color: hsl(200, 15%, 8%);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+body.dark .back,
+body.dark .borders a {
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 100%, 100%);
+  border: none;
+}
+
+body.dark .detail-info,
+body.dark .details,
+body.dark .details h3 {
+  color: hsl(0, 100%, 100%);
+}
+
+
+@media (max-width: 767px) {
+  .wrapper {
+    padding: 30px;
+  }
+
+  .country-details {
+    flex-direction: column;
+    gap: 40px;
+    margin-block: 40px;
+    padding-right: 0;
+    align-items: start;
+  }
+
+  .detail-info {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .flag {
+    height: auto;
+  }
+
+  .details h3 {
     margin-block: 20px;
-    
-}
-.borders{
-    margin-top:15px;
-}
-.border-countries{
-    margin-top:20px;
-}
-.borders a{
-     padding:0px 0px;
-}
+  }
+
+  .borders {
+    justify-content: flex-start;
+  }
 }

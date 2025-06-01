@@ -101,9 +101,22 @@ function renderCards(countries) {
   });
 }
 
-fetch('./pages/header.html')
-      .then(response => response.text())
+          fetch('./pages/header.html')
+      .then(res => res.text())
       .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;
-      })
-      .catch(error => console.error('Error loading header:', error));
+
+        const toggle = document.querySelector('.color-scheme');
+        const body = document.body;
+        const savedTheme = localStorage.getItem('theme');
+
+        if (savedTheme === 'dark') {
+          body.classList.add('dark');
+        }
+
+        toggle?.addEventListener('click', () => {
+          body.classList.toggle('dark');
+          const isDark = body.classList.contains('dark');
+          localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+      });
