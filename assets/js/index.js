@@ -61,7 +61,7 @@ window.addEventListener("click", function(e) {
 
 let allCountries = []; 
 
-fetch('https://restcountries.com/v3.1/all')
+fetch('https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital')
   .then(response => response.json())
   .then(countries => {
     allCountries = countries;
